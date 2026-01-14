@@ -12,11 +12,15 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
 
+st.image("image/copyrights.png", caption="© 2026 ", width=100)
+
 # -----------------------------
 # CONFIG
 # -----------------------------
 st.set_page_config(page_title="Dashboard Trésorerie", layout="wide")
 st.title("Tableau de bord de trésorerie avec prévision ML")
+
+st.subheader("Anthony DJOUMBISSI")
 
 
 
@@ -378,3 +382,6 @@ with colx2:
         file_name="courbes_tresorerie.csv",
         mime="text/csv"
     )
+
+
+st.image("image/porte drapeau SEAHORSE.png", caption="© 2026 ", width=100)
