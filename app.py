@@ -18,22 +18,6 @@ from sklearn.pipeline import Pipeline
 st.set_page_config(page_title="Dashboard Trésorerie (CSV + ML)", layout="wide")
 st.title("Tableau de bord de trésorerie — CSV + Python + Streamlit (Prévision cloud-friendly)")
 
-@st.cache_data(show_spinner=False)
-def read_transactions_csv(path_or_buffer):
-    chunks = []
-    for chunk in pd.read_csv(path_or_buffer, chunksize=200_000):
-        chunk.columns = [c.strip().lower() for c in chunk.columns]
-        chunks.append(chunk)
-    return pd.concat(chunks, ignore_index=True)
-
-@st.cache_data(show_spinner=False)
-def prepare_cached(df_raw):
-    return prepare_transactions(df_raw)
-
-@st.cache_data(show_spinner=False)
-def daily_cached(df_f):
-    return daily_cashflow(df_f)
-
 
 
 # -----------------------------
