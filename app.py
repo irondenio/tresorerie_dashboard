@@ -26,6 +26,14 @@ def read_transactions_csv(path_or_buffer):
         chunks.append(chunk)
     return pd.concat(chunks, ignore_index=True)
 
+@st.cache_data(show_spinner=False)
+def prepare_cached(df_raw):
+    return prepare_transactions(df_raw)
+
+@st.cache_data(show_spinner=False)
+def daily_cached(df_f):
+    return daily_cashflow(df_f)
+
 
 
 # -----------------------------
