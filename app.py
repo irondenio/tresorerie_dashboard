@@ -20,7 +20,7 @@ st.image("image/copyrights.png", caption="© 2026 ", width=100)
 st.set_page_config(page_title="Dashboard Trésorerie", layout="wide")
 st.title("Tableau de bord de trésorerie avec prévision ML")
 
-st.subheader("Anthony DJOUMBISSI")
+st.subheader("Auteur :Anthony DJOUMBISSI")
 
 
 
